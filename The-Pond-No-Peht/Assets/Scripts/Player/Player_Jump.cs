@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Player_Jump : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float playerheight = 0f;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
