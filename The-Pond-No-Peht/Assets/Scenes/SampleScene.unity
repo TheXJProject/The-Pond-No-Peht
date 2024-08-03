@@ -400,6 +400,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerheight: 0
+  preJumpTimeSeconds: 0.1
+  timeSincePreJump: 10
+  jumpVelocity: 15
 --- !u!114 &1578430192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +416,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHeight: 0
-  playerOnSurface: 0
+  playerVerticalVelocity: 0
+  playerGravityStrength: 70
+  playerOnSurface: 1
+  move:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f2576ad1-f5d3-44d3-b3aa-3a947ec17a7a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  jump:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c013996a-4968-45e7-b7d5-34bac8b4ab31
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1663145970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2478052259101040817, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
@@ -439,6 +462,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1051501929241145227, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051501929241145227, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1051501929241145227, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.26
@@ -488,6 +519,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7215442504142722309, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215442504142722309, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
@@ -497,10 +532,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7201907767929785417, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 1578430191}
+      addedObject: {fileID: 1578430192}
     - targetCorrespondingSourceObject: {fileID: 7201907767929785417, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
       insertIndex: 3
-      addedObject: {fileID: 1578430192}
+      addedObject: {fileID: 1578430191}
     - targetCorrespondingSourceObject: {fileID: 2478052259101040817, guid: fa5bb7e1a2be20c4c994c780709d6706, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1663145973}

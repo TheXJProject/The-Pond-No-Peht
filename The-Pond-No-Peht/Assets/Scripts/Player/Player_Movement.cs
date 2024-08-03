@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     public float moveSpeed = 3.0f;
+
     public PlayerController playerControls;
 
     Rigidbody2D rb;
@@ -14,8 +15,8 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
         playerControls = new PlayerController();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
