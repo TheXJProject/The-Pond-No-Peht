@@ -36,7 +36,7 @@ public class Player_Jump : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        // If time since pressed jump is within set preJump time, then commence jump if on the ground
         if (timeSincePreJump < preJumpTimeSeconds) 
         {
             if (playerController.playerOnSurface) { commenceJump(); }
@@ -45,21 +45,19 @@ public class Player_Jump : MonoBehaviour
     }
     private void jumpPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Jumped");
-        if (!playerController.playerOnSurface) 
+        // If jump pressed, commence jump if not on the floor, otherwise begin timer to measure since jump was pressed
+        if (playerController.playerOnSurface) 
         {
-            timeSincePreJump = 0f;
+            commenceJump();
         }
         else 
         {
-            Debug.Log("player Not on surface, so jumped");
-            commenceJump(); 
+            timeSincePreJump = 0f;
         }
     }
 
     private void commenceJump()
     {
-        Debug.Log("Jump Commenced");
         playerController.playerOnSurface = false;
         playerController.playerVerticalVelocity = jumpVelocity;
     }
