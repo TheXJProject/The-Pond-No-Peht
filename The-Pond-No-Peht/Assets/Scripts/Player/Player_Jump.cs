@@ -45,14 +45,8 @@ public class Player_Jump : MonoBehaviour
     private void jumpPressed(InputAction.CallbackContext context)
     {
         // If jump pressed, commence jump if not on the floor, otherwise begin timer to measure since jump was pressed
-        if (playerController.playerOnSurface)
-        {
-            commenceJump();
-        }
-        else
-        {
-            timeSincePreJump = 0f;
-        }
+        if (playerController.playerOnSurface) { commenceJump(); }
+        else { timeSincePreJump = 0f; }
     }
 
     private void commenceJump()

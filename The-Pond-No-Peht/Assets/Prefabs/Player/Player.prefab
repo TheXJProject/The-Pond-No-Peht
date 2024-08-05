@@ -161,6 +161,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHeight: 0
+  playerVerticalVelocity: 0
+  playerGravityStrength: 70
+  playerOnSurface: 1
+  move:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 57b630f5-6cef-4f72-933c-172bfe8b7283
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  jump:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8fe0fb02-02e5-409c-aee8-c1e47d38ffe7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &4800106272774318296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0ab98052bdb1e46809d393c43504f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preJumpTimeSeconds: 0.05
+  timeSincePreJump: 10
+  jumpVelocity: 20
 --- !u!50 &4404991117609532941
 Rigidbody2D:
   serializedVersion: 4
