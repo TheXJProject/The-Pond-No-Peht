@@ -13,13 +13,6 @@ public class Player_Controller : MonoBehaviour
     public InputAction move;
     public InputAction jump;
 
-    Transform bodyPositioning;
-
-    private void Awake()
-    {
-        bodyPositioning = transform.GetChild(0).transform;
-    }
-
     private void FixedUpdate()
     {
         if (!playerOnSurface)
@@ -36,10 +29,5 @@ public class Player_Controller : MonoBehaviour
             playerHeight = 0f;
             playerOnSurface = true;
         }
-    }
-
-    private void Update()
-    {
-        bodyPositioning.position = new Vector3(transform.position.x, transform.position.y + playerHeight, 0);
     }
 }

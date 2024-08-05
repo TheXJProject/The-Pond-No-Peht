@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Player_Jump : MonoBehaviour
 {
-    public float playerheight = 0f;
     public PlayerController playerControls;
 
     [SerializeField] float preJumpTimeSeconds = 0.05f;
@@ -37,20 +36,20 @@ public class Player_Jump : MonoBehaviour
     private void FixedUpdate()
     {
         // If time since pressed jump is within set preJump time, then commence jump if on the ground
-        if (timeSincePreJump < preJumpTimeSeconds) 
+        if (timeSincePreJump < preJumpTimeSeconds)
         {
             if (playerController.playerOnSurface) { commenceJump(); }
-            timeSincePreJump += Time.deltaTime; 
+            timeSincePreJump += Time.deltaTime;
         }
     }
     private void jumpPressed(InputAction.CallbackContext context)
     {
         // If jump pressed, commence jump if not on the floor, otherwise begin timer to measure since jump was pressed
-        if (playerController.playerOnSurface) 
+        if (playerController.playerOnSurface)
         {
             commenceJump();
         }
-        else 
+        else
         {
             timeSincePreJump = 0f;
         }
