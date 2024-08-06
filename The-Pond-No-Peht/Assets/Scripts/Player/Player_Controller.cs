@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
 {
+    public int playerLevel = 0;
     public float playerHeight = 0f;
     public float playerVerticalVelocity = 0f;
     public float playerGravityStrength = 1f;
@@ -30,9 +31,9 @@ public class Player_Controller : MonoBehaviour
         {
             playerVerticalVelocity = 0f;
         }
-        if (playerHeight <= 0f)
+        if (playerHeight <= playerLevel)
         {
-            playerHeight = 0f;
+            playerHeight = playerLevel;
             playerOnSurface = true;
         }
         if (recordHeight > playerHeight) { Debug.Log(recordHeight); }

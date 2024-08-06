@@ -6,17 +6,16 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     public float moveSpeed = 3.0f;
-
     public PlayerController playerControls;
 
-    Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
+
     Vector2 moveDirection = Vector2.zero;
     InputAction move;
 
     private void Awake()
     {
         playerControls = new PlayerController();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()

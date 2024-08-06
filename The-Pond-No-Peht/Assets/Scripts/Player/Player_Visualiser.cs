@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player_Visualiser : MonoBehaviour
 {
-    Player_Controller playerStatsAccess;
-    Transform bodyPositioning;
-    private void Awake()
-    {
-        playerStatsAccess = GetComponent<Player_Controller>();
-        bodyPositioning = transform.GetChild(0).transform;
-    }
+    [SerializeField] Player_Controller playerStatsAccess;
+    [SerializeField] Transform bodyPositioning;
 
     private void Update()
     {

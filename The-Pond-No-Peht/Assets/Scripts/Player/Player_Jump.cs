@@ -11,13 +11,13 @@ public class Player_Jump : MonoBehaviour
     [SerializeField] float timeSincePreJump = 10f;
     [SerializeField] float jumpVelocity = 10f;
 
+    [SerializeField] Player_Controller playerController;
+
     InputAction jump;
-    Player_Controller playerController;
 
     private void Awake()
     {
         playerControls = new PlayerController();
-        playerController = GetComponent<Player_Controller>();
     }
 
     private void OnEnable()
